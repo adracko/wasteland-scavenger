@@ -1,4 +1,133 @@
-.rgb (@r: 0, @g: 255, @b: 0){
-  color:rgb(@r,@g,@b);
-  border-color:rgb(@r,@g,@b);
+@bgcolor:#222;
+@r: 0;
+@g: 255;
+@b: 0;
+@rgb: rgb(@r,@g,@b);
+
+.border-prep{
+  border-width: 1px;
+  border-style:solid;
+}
+.rgb {
+  color:@rgb;
+  border-color:@rgb;
+}
+.invert {
+  color:@bgcolor;
+  background:@rgb;
+}
+body{
+background:@bgcolor;
+}
+.inactive{
+border-color:@bgcolor;
+color:@bgcolor;
+}
+.active, #screen, .invertable {
+.rgb
+}
+.invertable, #screen, #nav-top>div{
+.border-prep
+}
+.invertable:hover{
+.invert
+}
+
+
+
+//HTML Range Customization
+
+@thumb-radius: 0;
+@thumb-height: 20px;
+@thumb-width: 10px;
+
+@track-width: 100%;
+@track-height: 1px;
+   
+@track-radius: 0;
+
+.track() {
+  width: @track-width;
+  height: @track-height;
+  cursor: pointer;
+  animate: 0.2s;
+}
+
+.thumb() {
+
+  border: 0;
+  height: @thumb-height;
+  width: @thumb-width;
+  border-radius: @thumb-radius;
+  background: @rgb;
+  cursor: pointer;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0;
+  width: @track-width;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track();
+
+    background: @rgb;
+    border-radius: @track-radius;
+    border: 0;
+  }
+  
+  &::-webkit-slider-thumb {
+    .thumb();
+    -webkit-appearance: none;
+    margin-top: 1 - (@thumb-height / 2);
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: @rgb;
+  }
+
+  &::-moz-range-track {
+    .track();
+
+    background: @rgb;
+    border-radius: @track-radius;
+     border: 0;
+  }
+  &::-moz-range-thumb {
+     .thumb();
+  }
+
+  &::-ms-track {
+    .track(); 
+    background: transparent;
+    border-color: transparent;
+    border-width: @thumb-width 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: @rgb;
+    border: 0;
+    border-radius: @track-radius*2;
+
+  }
+  &::-ms-fill-upper {
+    background: @rgb;
+    border: 0;
+    border-radius: @track-radius*2;
+
+  }
+  &::-ms-thumb {
+    .thumb();
+  }
+  &:focus::-ms-fill-lower {
+    background: @rgb;
+  }
+  &:focus::-ms-fill-upper {
+    background: @rgb;
+  }
 }
