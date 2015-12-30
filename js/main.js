@@ -15,7 +15,7 @@ $(document).ready(function(){
     $('section[data-section="'+className+'"').removeClass('hidden')
   });
 //Color change
-  $('input[type="range"]').click(function(){
+  $('input[type="range"]').mouseup(function(){
     less.modifyVars({
       '@r': $('#red-range').val(),
       '@g': $('#green-range').val(),
