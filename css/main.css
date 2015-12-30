@@ -65,15 +65,12 @@ html{
 body{
     width:800px;
     height:600px;
-    background:#222;
+
     left: 25%;
     top: 5%;
     position: absolute;
 }
-.inactive{
-border-color:#222;
-color: #222;
-}
+
 .active, #screen, #nav-top>div>div, .button{
 border-color:#00ff00;
 color: #00ff00;
