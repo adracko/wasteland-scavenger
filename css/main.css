@@ -65,20 +65,11 @@ html{
 body{
     width:800px;
     height:600px;
-
     left: 25%;
     top: 5%;
     position: absolute;
 }
 
-.active, #screen, #nav-top>div>div, .button{
-border-color:#00ff00;
-color: #00ff00;
-}
-#nav-top>div>div:hover{
-background:#00ff00;
-color:#222;
-}
 #nav-top {
     display: -webkit-box;
     display: -moz-box;
@@ -93,11 +84,6 @@ color:#222;
     -webkit-flex:1 1 0;
     -ms-flex:1 1 0;
     flex:1 1 0;
-    border-width: 1px;
-    border-style:solid;
-}
-#nav-top>div>div{
-margin:5%;
 }
 #screen{
     height:89%;
@@ -105,13 +91,10 @@ margin:5%;
     position:absolute;
     left:1.125%;
     bottom:1.5%;
-    border-width: 1px;
-    border-style:solid;
 }
-#nav-top>div>div, .button{
+.invertable{
     background: transparent;
-    border-width: 1px;
-    border-style:solid;
+    margin:5%;
     padding:0;
     height:28px;
     line-height:28px;

@@ -24,25 +24,25 @@
     <body>
 <nav id="nav-top">
   <div class="scavenge active">
-    <div data-section="scavenge" class="scavenge">SCAVENGE</div>    
+    <div data-section="scavenge" class="scavenge invertable">SCAVENGE</div>    
   </div>
   <div class="hunt inactive">
-    <div data-section="hunt" class="hunt">HUNT</div>    
+    <div data-section="hunt" class="hunt invertable">HUNT</div>    
   </div>
   <div class="quest inactive">
-    <div data-section="quest" class="quest">QUEST</div>    
+    <div data-section="quest" class="quest invertable">QUEST</div>    
   </div>
   <div class="build inactive">
-    <div data-section="build" class="build">BUILD</div>    
+    <div data-section="build" class="build invertable">BUILD</div>    
   </div>
   <div class="manage inactive">
-    <div data-section="manage" class="manage">MANAGE</div>    
+    <div data-section="manage" class="manage invertable">MANAGE</div>    
   </div>
   <div class="stocks inactive">
-    <div data-section="stocks" class="stocks">STOCKS</div>    
+    <div data-section="stocks" class="stocks invertable">STOCKS</div>    
   </div>
   <div class="options inactive">
-    <div data-section="options" class="options">OPTIONS</div>    
+    <div data-section="options" class="options invertable">OPTIONS</div>    
   </div>
 </nav>
 <main id="screen">     
@@ -60,6 +60,9 @@
   <section data-section="stocks" class="stocks screen hidden">
   </section>
   <section data-section="options" class="options screen hidden">
+    <input id="red-range" value="0" max="255" type="range"/>
+    <input id="green-range" value="255" max="255" type="range"/>
+    <input id="blue-range" value="0" max="255" type="range"/>
   </section>
 </main>
 
