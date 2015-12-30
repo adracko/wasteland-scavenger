@@ -61,9 +61,16 @@
   </section>
   <section data-section="options" class="options screen hidden">
     <div class="color-slider">
-      <input id="red-range" value="0" max="255" type="range"/>
-      <input id="green-range" value="255" max="255" type="range"/>
-      <input id="blue-range" value="0" max="255" type="range"/>
+      <input id="red-range" value="0" max="255" type="range" list="numbers"/>
+      <input id="green-range" value="255" max="255" type="range" list="numbers"/>
+      <input id="blue-range" value="0" max="255" type="range" list="numbers"/>
+      <datalist id="numbers">
+        <option>32</option> 
+        <option>64</option> 
+        <option label="midpoint">128</option> 
+        <option>192</option>
+        <option>224</option> 
+      </datalist>
     </div>
   </section>
 </main>

@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Kade Lyons - Lead Developer
 
 # THANKS
 
-    <name>
+    Interplay, Bethesda
 
 # TECHNOLOGY COLOPHON
 
