@@ -1,10 +1,10 @@
 $(document).ready(function(){
+//Menu navigation
   $('#nav-top').children().children().click(function(){
     $('#nav-top').children().addClass('inactive').removeClass('active')
     $(this).parent().addClass('active').removeClass('inactive')
     var className = $(this).data('section')
-    var data = $('#screen').children().data('section') === className
-    /**$('#screen').children().addClass('hidden')**/
-    $(data).append('hidden')
+    $('#screen').children().addClass('hidden')
+    $('section[data-section="'+className+'"').removeClass('hidden')
   });
 });
